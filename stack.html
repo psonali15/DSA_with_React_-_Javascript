@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stack in Javascript</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let max = 5;
+      function push(newVal) {
+        if (currentSize >= max) {
+          alert("You cannt Add new val " + newVal);
+        } else {
+          data[currentSize] = newVal;
+          currentSize += 1;
+          console.log(data);
+        }
+      }
+      function pop() {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("array already empty");
+        }
+      }
+
+      push(8);
+      push(90);
+      push(55);
+      // push(84);
+      push(95);
+
+      pop();
+      pop();
+      push(21);
+      push(100);
+    </script>
+  </head>
+  <body></body>
+</html>

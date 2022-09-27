@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Search using Iterative Approach</title>
+    <script>
+      let data = [4, 15, 20, 45, 56, 78, 81, 90, 97];
+      let find = 80;
+      let start = 0;
+      let end = data.length - 1;
+      let pos = undefined;
+
+      while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+
+        if (data[mid] === find) {
+          pos = mid;
+          break;
+        } else if (data[mid] < find) {
+          start = mid + 1;
+        } else {
+          end = mid - 1;
+        }
+      }
+      console.log(pos);
+    </script>
+  </head>
+</html>

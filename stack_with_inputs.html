@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stack With Inputs and Buttons</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let max = 5;
+      function push() {
+        if (currentSize >= max) {
+          alert("you cannt add value");
+        } else {
+          let val = document.getElementById("stack_val").value;
+          val = parseInt(val);
+          data[currentSize] = val;
+          currentSize += 1;
+          document.getElementById("stack_val").value = "";
+          console.log(data);
+        }
+      }
+      function pop() {
+        if (currentSize > 0) {
+          console.log(data);
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("array is already empty");
+        }
+      }
+      function display() {
+        document.getElementById("disp").innerHTML = data;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="stack_val" placeholder="Enter Value" />
+    <button onclick="push()">Push</button>
+    <button onclick="pop()">Pop</button>
+    <button onclick="display()">Display</button>
+    <div id="disp"></div>
+  </body>
+</html>

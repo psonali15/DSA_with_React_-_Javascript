@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stack with Class in Javascript</title>
+    <script>
+      class Stack {
+        item = [];
+        currentSize;
+        maxSize;
+        constructor(size) {
+          this.maxSize = size;
+          this.currentSize = this.item.length;
+        }
+        function push(newVal) {
+            this.item[currentSize]= newVal;
+            this.currentSize++;
+        }
+        function pop(){
+             this.currentSize--;
+             this.item.length = this.currentSize;
+        }
+        st1 = new Stack;
+        st1.push(10);
+        console.log(st1);
+      }
+    </script>
+  </head>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Search Using Recursion Approach</title>
+    <script>
+      let data = [9, 11, 17, 29, 36, 44, 56, 59, 79, 80, 95, 190];
+      let find = 59;
+      let start = 0;
+      let end = data.length - 1;
+      let position = undefined;
+
+      function getSearchRecursion(data, start, end) {
+        let mid = Math.floor((start + end) / 2);
+        if (data[mid] === find) {
+          position = mid;
+        } else if (data[mid] < find) {
+          getSearchRecursion(data, start + 1, end);
+        } else {
+          getSearchRecursion(data, start, end - 1);
+        }
+      }
+      getSearchRecursion(data, start, end);
+      console.log(position);
+    </script>
+  </head>
+</html>

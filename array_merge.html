@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Two Array Merging</title>
+    <script>
+      let data = [11, 77, 90, 20, 60, 44, 81];
+      let data2 = [10, 20, 40, 50, 60];
+      let data3 = [];
+      for (i = 0; i < data.length; i++) {
+        data3[i] = data[i];
+      }
+      for (i = 0; i < data2.length; i++) {
+        //console.log(data.length + i);
+        data3[data.length + i] = data2[i];
+      }
+      console.log(data3);
+      //console.log(data.reverse());
+      //   let data4 = [...data, ...data2];
+      //   console.log(data4);
+    </script>
+  </head>
+</html>

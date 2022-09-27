@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Linear Search in javascript</title>
+    <script>
+      function eleSearch() {
+        let data = [4, 88, 21, 40, 76, 47, 110, 60, 58, 10];
+        let find = document.getElementById("el").value;
+        let pos = undefined;
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] == find) {
+            pos = i;
+            break;
+          }
+        }
+        if (!pos) {
+          alert("This element not found");
+        } else {
+          alert("This is " + pos);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="el" placeholder="Enter the Number" />
+    <button onclick="eleSearch()">Search</button>
+  </body>
+</html>

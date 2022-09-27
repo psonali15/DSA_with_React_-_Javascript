@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anagram in Javascript</title>
+    <script>
+      function checkAnagram(Str1, Str2) {
+        ObjStr1 = {};
+        for (ch of Str1) {
+          //   console.log(ch);
+          ObjStr1[ch] = (ObjStr1[ch] || 0) + 1;
+        }
+        for (ch of Str2) {
+          if (!ObjStr1[ch]) {
+            return false;
+          }
+          ObjStr1[ch]--;
+          //return true;
+        }
+        return true;
+      }
+      console.log(checkAnagram("cat", "act"));
+    </script>
+  </head>
+  <body></body>
+</html>

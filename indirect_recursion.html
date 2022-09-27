@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Indirect Recursion</title>
+    <script>
+      let money = 100;
+      let totalApple = 0;
+      function buyApple(x) {
+        // console.log(x);
+        if (x > 0) {
+          console.log("I have", x, "RS", totalApple, "apple");
+          buyMore(x);
+        } else {
+          console.log("I dont have money to buy more apple", totalApple);
+        }
+      }
+      function buyMore(x) {
+        totalApple++;
+        buyApple(x - 20);
+        // console.log("buy more", x);
+      }
+      buyApple(money);
+      //   function test(x) {
+      //     // console.log(x);
+      //     if (x > 0) {
+      //       test(x - 1);
+      //     }
+      //     console.log(x);
+      //   }
+      //   let data = 10;
+      //   test(data);
+    </script>
+  </head>
+  <body></body>
+</html>

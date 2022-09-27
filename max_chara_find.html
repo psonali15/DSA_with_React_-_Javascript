@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maximum occuring character in string</title>
+    <script>
+      function checkChara(data) {
+        strObj = {};
+        maxKey = 0;
+        for (let i = 0; i < data.length; i++) {
+          let key = data[i];
+          if (!strObj[key]) {
+            strObj[key] = 0;
+          }
+          strObj[key]++;
+
+          if (maxKey == "" || strObj[key] > strObj[maxKey]) {
+            maxKey = key;
+          }
+        }
+        return maxKey;
+      }
+
+      let str = "helloo";
+      console.log(checkChara(str));
+    </script>
+  </head>
+  <h2>Maximum occuring character in string</h2>
+</html>

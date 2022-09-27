@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome in DSA</title>
+    <script>
+      function Palindrome(data) {
+        let start = 0;
+        let end = data.length - 1;
+        let result = true;
+        while (end > start) {
+          if (data[start] != data[end]) {
+            result = false;
+          }
+          start++;
+          end--;
+        }
+        return result;
+      }
+      let str = "level";
+      console.log(Palindrome(str));
+    </script>
+  </head>
+  <body>
+    <h2>Check String Palindrome or not!</h2>
+  </body>
+</html>

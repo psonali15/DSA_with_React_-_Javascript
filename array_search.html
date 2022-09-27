@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Element in Array</title>
+    <script>
+      //   let data = [88, 22, 11, 66, 21, 90, 4, 60];
+      //   let valueEle = 88;
+      //   let index = undefined;
+      //   for (i = 0; i < data.length; i++) {
+      //     //console.log(data[i]);
+      //     if (data[i] === valueEle) {
+      //       index = i;
+      //       console.log(index);
+      //     }
+      //   }
+      function searchVal() {
+        let data = [88, 22, 11, 66, 21, 90, 4, 60];
+        let valueEle = document.getElementById("element").value;
+        valueEle = parseInt(valueEle);
+        let index = undefined;
+        for (i = 0; i < data.length; i++) {
+          //console.log(data[i]);
+          if (data[i] === valueEle) {
+            index = i;
+          }
+        }
+        console.log(index);
+        // console.log(data.indexOf(valueEle));
+        //console.log(data.splice(data.indexOf(valueEle), 1));
+        //console.log(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="element" placeholder="Enter Element value" />
+    <button onclick="searchVal()">Search Element</button>
+  </body>
+</html>

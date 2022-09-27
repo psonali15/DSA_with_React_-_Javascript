@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Sorting</title>
+    <script>
+      let data = [2, 8, 90, 5, 66, 44, 20, 10, 79, 88];
+
+      for (i = 0; i < data.length; i++) {
+        // console.log(data);
+        for (j = 0; j < data.length; j++) {
+          //   console.log(data);
+          if (data[j] > data[j + 1]) {
+            let temp = data[j];
+            data[j] = data[j + 1];
+            data[j + 1] = temp;
+          }
+        }
+      }
+      console.log(data);
+    </script>
+  </head>
+</html>

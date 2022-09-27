@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recursion</title>
+    <script>
+      function factorial(item) {
+        if (item == 0) {
+          return 1;
+        }
+        //return item;
+        return item * factorial(item - 1);
+      }
+      let data = 6;
+      console.log(factorial(data));
+
+      //   console.log(
+      //     data *
+      //       factorial(data - 1) *
+      //       factorial(data - 2) *
+      //       factorial(data - 3) *
+      //       factorial(data - 4) *
+      //       factorial(data - 5)
+      //   );
+    </script>
+  </head>
+</html>

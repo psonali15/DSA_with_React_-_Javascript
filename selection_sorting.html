@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sorting in Javascript</title>
+    <script>
+      let data = [4, 60, 11, 25, 18, 90, 45, 79];
+      for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data.length; j++) {
+          // for ascending order
+          if (data[j] > data[j + 1]) {
+            temp = data[j + 1];
+            data[j + 1] = data[j];
+            data[j] = temp;
+          }
+          // // for desending order
+          // if (data[j] < data[j + 1]) {
+          //   temp = data[j];
+          //   data[j] = data[j + 1];
+          //   data[j + 1] = temp;
+          // }
+        }
+      }
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
